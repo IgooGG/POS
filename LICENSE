@@ -1,24 +1,30 @@
-This is free and unencumbered software released into the public domain.
+IgooGG Receipt Printer Software  
+Proprietary Freeware License  
+Effective Date: July 25, 2025
 
-Anyone is free to copy, modify, publish, use, compile, sell, or
-distribute this software, either in source code form or as a compiled
-binary, for any purpose, commercial or non-commercial, and by any
-means.
+Copyright (c) 2025 Ignacy “IgooGG”. All Rights Reserved.
 
-In jurisdictions that recognize copyright laws, the author or authors
-of this software dedicate any and all copyright interest in the
-software to the public domain. We make this dedication for the benefit
-of the public at large and to the detriment of our heirs and
-successors. We intend this dedication to be an overt act of
-relinquishment in perpetuity of all present and future rights to this
-software under copyright law.
+1. Grant of License  
+   You are granted a non‑exclusive, non‑transferable, royalty‑free right to install and use the Licensed Software **solely** for printing receipts in your point‑of‑sale environment.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
-OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
-ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-OTHER DEALINGS IN THE SOFTWARE.
+2. Restrictions  
+   You may NOT, and may not permit any third party to:  
+   a. Reverse‑engineer, decompile, disassemble or otherwise derive source from the Software;  
+   b. Modify, adapt, translate, or create derivative works;  
+   c. Distribute, sell, sublicense, rent, lease or transfer copies;  
+   d. Fork, commit to, or mirror this repository.
 
-For more information, please refer to <https://unlicense.org>
+3. Ownership  
+   The Software is licensed, not sold. All rights, title and interest remain with Ignacy “IgooGG”.
+
+4. Disclaimer of Warranty  
+   The Software is provided “AS‑IS” without warranty of any kind.
+
+5. Limitation of Liability  
+   In no event will Ignacy “IgooGG” be liable for any damages arising out of use.
+
+6. Termination  
+   Any breach of this Agreement terminates your license immediately.
+
+—  
+By downloading or using this software, you acknowledge that you have read, understood, and agree to be bound by this license.
