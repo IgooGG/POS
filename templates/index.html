@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <title>POS Menu</title>
+  <title>Menu POS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body { background: #f2f2f2; font-family: sans-serif; color: #333; padding: 20px; }
@@ -39,17 +39,17 @@
   </div>
 
   <div class="controls">
-    <button class="btn btn-finish" onclick="finishOrder()">Finish Order</button>
-    <button class="btn btn-clear"  onclick="clearOrder()">Clear Order</button>
+    <button class="btn btn-finish" onclick="finishOrder()">Zakończ zamówienie</button>
+    <button class="btn btn-clear"  onclick="clearOrder()">Wyczyść zamówienie</button>
   </div>
 
   <script>
     function updateDisplay(order, total) {
-      let txt = 'Order:\n';
+      let txt = 'Zamówienie:\n';
       order.forEach(i => {
         txt += `${i.name} – ${i.price.toFixed(2)}zł\n`;
       });
-      txt += `\nTotal: ${total.toFixed(2)}zł`;
+      txt += `\nSuma: ${total.toFixed(2)}zł`;
       document.getElementById('display').innerText = txt;
     }
 
@@ -72,7 +72,7 @@
       const r = await fetch('/finish_order',{method:'POST'});
       const {order, total, intent_uri} = await r.json();
 
-      // Fire the RawBT intent via hidden iframe
+      // Uruchomienie wydruku przez RawBT
       const ifr = document.createElement('iframe');
       ifr.style.display = 'none';
       ifr.src = intent_uri;
