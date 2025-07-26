@@ -3,21 +3,21 @@ from datetime import datetime
 from flask import Flask, render_template, request, session, jsonify
 from dotenv import load_dotenv
 
+
 # ------------------------------------------------------------------------------
 # Configuration
 # ------------------------------------------------------------------------------
 
 load_dotenv()  # take environment variables from .env.
 
+
 app = Flask(
     __name__,
     template_folder='templates',
     static_folder='static'
 )
-
-# SECRET_KEY should be set in a .env file:
-# SECRET_KEY=your-very-secret-key
 app.secret_key = os.getenv('SECRET_KEY') or os.urandom(24)
+
 
 # Receipt layout constants
 WIDTH = 29
@@ -36,6 +36,7 @@ ITEMS = [
     {'name': 'Smoothie', 'price': 4.00},
 ]
 
+
 # ------------------------------------------------------------------------------
 # Helpers
 # ------------------------------------------------------------------------------
@@ -44,6 +45,8 @@ def _init_order():
     """Ensure session has order_items list and total set."""
     session.setdefault('order_items', [])
     session.setdefault('total', 0.0)
+
+
 
 # ------------------------------------------------------------------------------
 # Routes
@@ -54,6 +57,8 @@ def index():
     """Render the main ordering page."""
     _init_order()
     return render_template('index.html', items=ITEMS)
+
+
 
 @app.route('/add_item', methods=['POST'])
 def add_item():
@@ -67,6 +72,8 @@ def add_item():
     session.modified = True
     return jsonify(order=session['order_items'], total=session['total'])
 
+
+
 @app.route('/clear_order', methods=['POST'])
 def clear_order():
     """Clear the current order."""
@@ -75,12 +82,13 @@ def clear_order():
     session.modified = True
     return jsonify(order=[], total=0.0)
 
+
+
 @app.route('/finish_order', methods=['POST'])
 def finish_order():
     """Generate a formatted receipt and return a RawBT intent URI."""
     _init_order()
 
-    # Build receipt header/footer
     sep    = "-" * WIDTH
     title  = "Lemonado".center(WIDTH)
     fiscal = "PARAGON FISKALNY".center(WIDTH)
@@ -96,10 +104,10 @@ def finish_order():
         item_lines.append(f"|{num}|{desc}|{unit}|{tot}|")
 
     # Summary
-    blank_row        = "|" + " " * COL1_W + "|"
-    suma_str         = f"Suma: €{session['total']:.2f}"
+    blank_row         = "|" + " " * COL1_W + "|"
+    suma_str          = f"Suma: €{session['total']:.2f}"
     space_for_summary = WIDTH - len(blank_row)
-    summary          = blank_row + suma_str.rjust(space_for_summary)
+    summary           = blank_row + suma_str.rjust(space_for_summary)
 
     # Thank‑you notes
     ty1 = "Dziękujemy za zamówienie".center(WIDTH)
@@ -140,10 +148,12 @@ def finish_order():
 
     return jsonify(order=[], total=0.0, intent_uri=intent_uri)
 
+
+
 # ------------------------------------------------------------------------------
 # Entrypoint
 # ------------------------------------------------------------------------------
 
 if __name__ == '__main__':
-    # In production, use a WSGI server instead of Flask's built-in
+    # In production, use a WSGI server instead of Flask's built‐in
     app.run(host='0.0.0.0', port=5000, debug=True)
