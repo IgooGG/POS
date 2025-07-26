@@ -15,15 +15,15 @@ WIDTH = 29
 COL1_W, COL2_W, COL3_W, COL4_W = 2, 10, 6, 6
 
 ITEMS = [
-    {'name': 'Coffee', 'price': 2.50},
-    {'name': 'Tea', 'price': 2.00},
-    {'name': 'Sandwich', 'price': 5.00},
-    {'name': 'Cake', 'price': 3.00},
-    {'name': 'Juice', 'price': 2.80},
-    {'name': 'Salad', 'price': 4.50},
-    {'name': 'Water', 'price': 1.00},
-    {'name': 'Cookie', 'price': 1.50},
-    {'name': 'Smoothie', 'price': 4.00},
+    {'name': 'Lemoniada', 'price': 2.00},
+    {'name': 'Slime', 'price': 5.00},
+    {'name': 'NIE-MA', 'price': 0.00},
+    {'name': 'NIE-MA', 'price': 0.00},
+    {'name': 'NIE-MA', 'price': 0.00},
+    {'name': 'NIE-MA', 'price': 0.00},
+    {'name': 'NIE-MA', 'price': 0.00},
+    {'name': 'NIE-MA', 'price': 0.00},
+    {'name': 'NIE-MA', 'price': 0.00},
 ]
 
 
