@@ -27,14 +27,13 @@ jobs:
 
       - name: Lint with flake8
         run: |
-          # Adjust paths or config as needed
           flake8 .
 
       - name: Install app dependencies
         run: |
+          pip install --upgrade pip
           pip install -r requirements.txt
 
       - name: Validate app imports
         run: |
-          # Ensures your Flask app has no syntax errors
           python -c "import main; print('✅ main.py imported successfully')"
