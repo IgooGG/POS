@@ -1,0 +1,5 @@
+# Core web framework
+Flask>=2.2.0,<3.0
+
+# Optional: for loading environment variables from a .env file
+python-dotenv>=0.21.0,<1.0
