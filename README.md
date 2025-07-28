@@ -25,4 +25,15 @@ python main.py
 
 Thats all. keep termux working. to disable web server click ctrl+c
 
+To update everything:
+---
+CTRL+C
+---
+git clone origin pull
+---
+
+Good job! now to start it:
+python main.py
+---
+
 install rawbt and configure printer in it.
