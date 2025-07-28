@@ -3,23 +3,23 @@ Welcome, this is a recipt printer software. prints recipt using RawBt intent. wo
 
 
 pkg update
-
+---
 pkg upgrade
-
+---
 pkg install git
-
+---
 pkg install python-pip
-
+---
 pkg install nginx
-
+---
 pip install flask dotenv
-
+---
 git clone https://github.com/IgooGG/POS.git
-
+---
 cd POS
-
+---
 nginx
-
+---
 python main.py
 
 
