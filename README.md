@@ -21,7 +21,7 @@ cd POS
 nginx
 ---
 python main.py
-
+---
 
 Thats all. keep termux working. to disable web server click ctrl+c
 
