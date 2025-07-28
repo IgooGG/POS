@@ -15,7 +15,7 @@ COL1_W, COL2_W, COL3_W, COL4_W = 2, 10, 6, 6
 ITEMS = [
     {'name': 'Lemoniada', 'price': 2.00},
     {'name': 'Slime',     'price': 5.00},
-    {'name': 'Woda gaz',    'price': 0.00},
+    {'name': 'Woda gaz',    'price': 5.00},
     {'name': 'NIE-MA',    'price': 0.00},
     {'name': 'NIE-MA',    'price': 0.00},
     {'name': 'NIE-MA',    'price': 0.00},
